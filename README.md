@@ -19,7 +19,7 @@ presented as **OnePlus Ace Racing Edition (PGZ110)**.
 ## Build
 
 ```bash
-lunch lineage_qqcandy-userdebug
+lunch lineage_qqcandy-trunk_staging-userdebug
 mka bacon -j12
 ```
 

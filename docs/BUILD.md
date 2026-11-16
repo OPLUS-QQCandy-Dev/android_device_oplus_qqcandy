@@ -82,7 +82,7 @@ Stock `super` layout (default):
 ```bash
 cd "$SRC"
 source build/envsetup.sh
-lunch lineage_qqcandy-userdebug
+lunch lineage_qqcandy-trunk_staging-userdebug
 mka bacon -j12
 ```
 
