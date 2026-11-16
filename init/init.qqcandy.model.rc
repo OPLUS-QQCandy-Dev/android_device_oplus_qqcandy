@@ -1,0 +1,20 @@
+# qqcandy runtime model/project detection.
+#
+# Single-SKU tree: OnePlus Ace Racing Edition (PGZ110, project 22801).
+# OPPO K10 (PGJM10, project 21143) is the same board and uses the same image;
+# its camera path is the 21143 set. This service only reports what the
+# bootloader says; it never mutates read-only product properties.
+
+service qqcandy-model /vendor/bin/qqcandy-model.sh
+    class late_start
+    user root
+    group root
+    oneshot
+    disabled
+
+# Deliberately not started automatically. The helper is a diagnostic tool and
+# does not attempt to mutate read-only product properties. Enable it manually
+# once a device-specific SELinux domain exists for it:
+#
+#   adb root
+#   adb shell setprop ctl.start qqcandy-model

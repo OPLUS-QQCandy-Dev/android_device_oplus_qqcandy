@@ -1,0 +1,13 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+soong_namespace {
+}
+
+sh_binary {
+    name: "qqcandy-model.sh",
+    src: "init/qqcandy-model.sh",
+    vendor: true,
+}

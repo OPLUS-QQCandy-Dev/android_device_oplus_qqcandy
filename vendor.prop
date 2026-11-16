@@ -1,0 +1,29 @@
+# Retail identity
+ro.vendor.oplus.market.name=一加 Ace 竞速版
+ro.vendor.oplus.market.enname=OnePlus Ace Race
+ro.vendor.product.oem=PGZ110
+ro.vendor.product.device.oem=OP5911
+
+# Bluetooth
+bluetooth.device.default_name=OnePlus Ace Racing
+
+# Fingerprint
+# qqcandy uses a side-mounted Goodix GSL6159. Setting these defaults is
+# important on a freshly formatted persist partition; otherwise the OPLUS
+# fingerprint HAL may probe for a UDFPS sensor and fail.
+persist.vendor.fingerprint.sensor_type=side
+persist.vendor.fingerprint.fp_id=S_gsl6159
+persist.vendor.fingerprint.optical.support=0
+
+# Display
+# 6.59" 1080x2412 LCD, 120Hz, Tianma NT36672C. Keep the panel driver selection
+# in the bootloader cmdline; do not hardcode a UDFPS display mode here. The
+# common mt6895 vendor.prop already sets the SurfaceFlinger display flags.
+
+# NFC
+ro.vendor.oplus.nfc.ccc_bmw_hmi_support=true
+ro.vendor.oplus.nfc.smart_switch_card=true
+ro.vendor.oplus.nfc.tap_to_share=false
+
+# USB
+vendor.usb.product_string=OnePlus Ace Racing

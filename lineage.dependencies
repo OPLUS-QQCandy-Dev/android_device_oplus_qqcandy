@@ -1,0 +1,26 @@
+[
+  {
+    "repository": "android_hardware_mediatek",
+    "target_path": "hardware/mediatek"
+  },
+  {
+    "repository": "android_hardware_oplus",
+    "target_path": "hardware/oplus"
+  },
+  {
+    "repository": "android_hardware_lineage_interfaces",
+    "target_path": "hardware/lineage/interfaces"
+  },
+  {
+    "repository": "android_hardware_google_pixel",
+    "target_path": "hardware/google/pixel"
+  },
+  {
+    "repository": "android_device_mediatek_sepolicy_vndr",
+    "target_path": "device/mediatek/sepolicy_vndr"
+  },
+  {
+    "repository": "android_device_lineage_sepolicy",
+    "target_path": "device/lineage/sepolicy"
+  }
+]
