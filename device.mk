@@ -29,8 +29,11 @@ PRODUCT_PACKAGES += \
     vendor.oplus.hardware.vibrator-service.qqcandy
 
 PRODUCT_COPY_FILES += \
-    vendor/oplus/qqcandy/proprietary/odm/etc/init/vibrator-default.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vibrator-default.rc \
-    vendor/oplus/qqcandy/proprietary/odm/etc/vintf/manifest/vibrator-default.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest/vibrator-default.xml
+    vendor/oplus/qqcandy/proprietary/odm/etc/init/vibrator-default.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vibrator-default.rc
+
+# VINTF metadata must not go through PRODUCT_COPY_FILES (Android 17).
+ODM_MANIFEST_FILES += \
+    vendor/oplus/qqcandy/proprietary/odm/etc/vintf/manifest/vibrator-default.xml
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/init/init.qqcandy.model.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qqcandy.model.rc
