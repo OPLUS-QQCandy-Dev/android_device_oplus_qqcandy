@@ -64,6 +64,21 @@ This avoids replacing the whole vendor kernel with the Xiaomi tree. The
 remaining source-kernel work is building the matching modules and keeping the
 qqcandy DTB/DTBO until `k6895v1_64/cust.dtsi` is ported.
 
+**Important:** this is the Linux stable BPF diff, not the Android FUSE-BPF
+feature. Xiaomi's tree additionally contains `kernel/bpf/bpf_fuse.c` and
+`fs/fuse` changes that are not in the qqcandy vendor tree. Do not copy
+`kernel/bpf/` alone from Xiaomi: FUSE-BPF needs the matching `fs/fuse` side and
+would otherwise fail to build.
+
+Android 17's BPF loader can also fail in userspace (`system/bpf`,
+`packages/modules/Connectivity`) even with a correct kernel. Before switching
+the whole device to a source kernel, collect the first boot `NetBpfLoad` /
+`bpfloader` log and check whether the failure is:
+
+- a stable BPF fix (this patch should cover it), or
+- a missing Android FUSE-BPF feature, or
+- a userspace BPF loader/netd assumption (platform forks, not kernel-only).
+
 ## Suggested source-kernel workflow
 
 1. Keep the current prebuilt `Image.gz`, `dtb/mt6895.dtb`, `dtbo.img` and
