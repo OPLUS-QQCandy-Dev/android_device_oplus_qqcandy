@@ -20,13 +20,13 @@ presented as **OnePlus Ace Racing Edition (PGZ110)**.
 
 ```bash
 lunch lineage_qqcandy-userdebug
-mka bacon -j$(nproc)
+mka bacon -j12
 ```
 
 Expanded super only:
 
 ```bash
-QQCANDY_EXPANDED_SUPER=true mka bacon -j$(nproc)
+QQCANDY_EXPANDED_SUPER=true mka bacon -j12
 ```
 
 ## Layout
