@@ -77,6 +77,11 @@ git clone -b lineage-24.0 https://github.com/LineageOS/android_device_lineage_se
 > 31 GB RAM: use `-j12`. Do **not** use `-j$(nproc)` (28 jobs); this
 > machine will OOM during Soong/Ninja. `repo sync` can stay at `-j8`.
 
+`cp2a` is the Android 17 release config: `PLATFORM_VERSION=17` and
+`PLATFORM_SDK_VERSION=37`. `trunk_staging` is the in-development trunk and
+still reports the old codename string (`PLATFORM_VERSION=Baklava`); do not use
+it for release builds.
+
 Stock `super` layout (default):
 
 ```bash

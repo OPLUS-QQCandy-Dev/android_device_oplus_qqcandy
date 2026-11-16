@@ -6,6 +6,7 @@ presented as **OnePlus Ace Racing Edition (PGZ110)**.
 ## Key facts
 
 - Platform: MediaTek MT6895 (`k6895v1_64`)
+- Android 17 (`PLATFORM_VERSION=17`, API 37), `cp2a` release config
 - A/B, virtual A/B, dynamic partitions
 - Boot header v4, 5.10.209 prebuilt kernel
 - 1080x2412 120 Hz LCD, side-mounted Goodix GSL6159
